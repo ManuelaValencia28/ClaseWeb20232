@@ -119,14 +119,29 @@ console.log(ObjetoFiltrado)
         Hora: '02:00 pm'
        }
        },
-       {Cosmetologa:'Evelyn', Tiempo,
-       Clienta:{
+       {Cosmetologa:'Evelyn', 
+       Tiempo: 'Medio tiempo',
+        Clienta:{
         Nombre:'Luisa Restrepo',
         Fecha:'Jueves 17/Agosto',
         Hora: '4:00 pm'
        }
        },
  ]
+
+ //METODO FILTER
+
+const CosmetologaFiltrado = Spa.filter((Cosmetologa) => Cosmetologa.Tiempo==='Completo');
+console.log(CosmetologaFiltrado);
+
+//METODO MAP
+
+const CitaClienta = Clienta.map((clientaa) =>
+{
+    return (clientaa.Nombre + " " + clientaa.Fecha);
+})
+
+console.log(CitaClienta);
 
  
 
