@@ -1,0 +1,91 @@
+body {
+    color: #fff;
+    background-color: #9380ac;
+    font: normal 18px "Andale Mono";
+}
+
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 10px auto 10px auto;
+}
+
+/*
+* Significa que se le aplica el estilo a todo, la propiedad que se especifica. 
+*/ 
+.container * {
+    box-sizing: border-box;
+
+}
+/*padding: el espacio entre el contenigo y el bolder. */
+
+.flex-outer, .flex-inner{
+/*
+* eliminar los puntos de la lista  Ul y Li*/
+ list-style-type: none ;
+ /*padding: el espacio entre el contenigo y el bolder. 
+ No me quite espacio del contenido*/
+ padding:0 ;
+}
+ 
+.flex-outer{
+    max-width: 800px;
+    margin: 0 auto ;
+}
+
+.flex-outer li, .flex-inner{
+    display: flex ;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* el > se le va aplicar esta propiedad a todos los hijos de la clase flex-outer*
+ > li a todos los li que son hijos de la clase flex-outer
+ last-chil = al ultimo
+*/
+.flex-outer > li:not(:last-child){
+    margin-bottom: 20px;
+   
+}
+
+.flex-inner{
+    padding: 0 10px;
+    justify-content: space-evenly;
+}
+/*letter-spacing : separar las letras con em*/
+.flex-outer li label, .flex-outer li p {
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    padding: 8px;
+    font-weight: 6+400;
+}
+
+.flex-outer > li > label,
+.flex-outer > li p{
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner{
+    flex: 1 0 220px;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea{
+    padding: 10px;
+    border: none;
+}
+
+.flex-outer li button{
+    background-color: rgb(84, 75, 138);
+    color:#fff;
+    margin: auto;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    border-radius:  10px;
+    letter-spacing: .09em;
+
+}
+
+
+
